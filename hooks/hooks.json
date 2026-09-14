@@ -1,0 +1,44 @@
+{
+  "description": "Stoic Ephor lifecycle hooks. Cross-platform: resolves plugin root via CLAUDE_PLUGIN_ROOT (Claude Code) or PLUGIN_ROOT (Codex), and config dir via CLAUDE_CONFIG_DIR or PLUGIN_DATA respectively.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|clear|compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "CLAUDE_CONFIG_DIR=\"${PLUGIN_DATA:-$CLAUDE_CONFIG_DIR}\" node \"${CLAUDE_PLUGIN_ROOT:-$PLUGIN_ROOT}/src/hooks/ephor-activate.js\"",
+            "timeout": 5,
+            "statusMessage": "Loading Stoic Ephor...",
+            "additionalContextLimit": 2500
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "CLAUDE_CONFIG_DIR=\"${PLUGIN_DATA:-$CLAUDE_CONFIG_DIR}\" node \"${CLAUDE_PLUGIN_ROOT:-$PLUGIN_ROOT}/src/hooks/ephor-mode-tracker.js\"",
+            "timeout": 5,
+            "statusMessage": "Tracking Ephor tier...",
+            "additionalContextLimit": 2500
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "CLAUDE_CONFIG_DIR=\"${PLUGIN_DATA:-$CLAUDE_CONFIG_DIR}\" node \"${CLAUDE_PLUGIN_ROOT:-$PLUGIN_ROOT}/src/hooks/ephor-response-check.js\"",
+            "timeout": 5,
+            "statusMessage": "Checking Ephor compliance..."
+          }
+        ]
+      }
+    ]
+  }
+}
