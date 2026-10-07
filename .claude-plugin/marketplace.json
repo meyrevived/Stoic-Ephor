@@ -1,0 +1,16 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "stoic-ephor",
+  "description": "Grammatically correct Stoic brevity — dignified compression that eliminates every word that doesn't earn its place.",
+  "owner": {
+    "name": "mrath"
+  },
+  "plugins": [
+    {
+      "name": "stoic-ephor",
+      "description": "Stoic brevity with impeccable grammar. Four tiers from philosophical to maximum compression.",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}

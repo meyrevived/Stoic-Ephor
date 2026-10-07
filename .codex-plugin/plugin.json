@@ -1,0 +1,20 @@
+{
+  "name": "stoic-ephor",
+  "version": "0.1.0+codex.20260914073524",
+  "description": "Grammatically correct Stoic brevity with four response-intensity tiers.",
+  "author": {
+    "name": "mrath"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Stoic Ephor",
+    "shortDescription": "Dignified, grammatically correct concise responses.",
+    "longDescription": "Stoic Ephor provides four tiers of concise, technically precise writing: counsel, ephor, spartan, and leonidas.",
+    "developerName": "mrath",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive"
+    ],
+    "defaultPrompt": "Activate Ephor mode for concise, grammatically correct responses."
+  }
+}

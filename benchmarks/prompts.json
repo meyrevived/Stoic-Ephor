@@ -1,0 +1,66 @@
+{
+  "conversational": [
+    {
+      "id": "explain-interface",
+      "category": "explanation",
+      "prompt": "Why does this Go interface feel wrong? It has 7 methods and every implementor only uses 2-3 of them."
+    },
+    {
+      "id": "debug-goroutine",
+      "category": "debugging",
+      "prompt": "My goroutine is leaking. I confirmed with pprof but I can't find the blocked channel."
+    },
+    {
+      "id": "code-retry",
+      "category": "code-generation",
+      "prompt": "Write a retry function with exponential backoff in Go."
+    },
+    {
+      "id": "explain-context",
+      "category": "explanation",
+      "prompt": "Explain Go's context package. When should I use context.Background vs context.TODO?"
+    },
+    {
+      "id": "debug-race",
+      "category": "debugging",
+      "prompt": "I'm getting a data race detected by -race. The trace points to a map access in a handler."
+    },
+    {
+      "id": "code-middleware",
+      "category": "code-generation",
+      "prompt": "Write HTTP middleware in Go that logs request duration and adds a request ID header."
+    },
+    {
+      "id": "explain-channels",
+      "category": "explanation",
+      "prompt": "What's the difference between buffered and unbuffered channels in Go? When should I use each?"
+    },
+    {
+      "id": "debug-nil-pointer",
+      "category": "debugging",
+      "prompt": "Getting nil pointer dereference in a Kubernetes reconciler. The object exists in the cluster but the Get call returns it as nil."
+    },
+    {
+      "id": "code-table-test",
+      "category": "code-generation",
+      "prompt": "Write a table-driven test in Go for a function that validates email addresses."
+    },
+    {
+      "id": "explain-error-handling",
+      "category": "explanation",
+      "prompt": "What's the idiomatic way to handle errors in Go? When should I wrap vs return directly?"
+    }
+  ],
+  "documents": [
+    {
+      "id": "design-doc",
+      "category": "document",
+      "prompt": "Write a brief design document for adding rate limiting to an HTTP API. Include problem statement, proposed solution, and alternatives considered."
+    },
+    {
+      "id": "readme-section",
+      "category": "document",
+      "prompt": "Write a README section explaining how to configure and use a Go CLI tool that processes log files. Include installation, basic usage, and common flags."
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "stoic-ephor",
+  "version": "0.1.0",
+  "description": "Grammatically correct Stoic brevity for Claude Code — dignified compression that eliminates every word that doesn't earn its place.",
+  "license": "MIT",
+  "author": "mrath",
+  "bin": {
+    "stoic-ephor": "./bin/install.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test tests/*.js"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "skills/",
+    "commands/",
+    "README.md",
+    "LICENSE"
+  ]
+}
